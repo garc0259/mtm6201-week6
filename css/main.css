@@ -38,3 +38,60 @@ nav a:active{
     transform: scale(1.2) 
     translateX(10px);
 }
+
+/*   > is direct child combinator   */
+
+main>p{
+    font-size: :1.25rem;
+}
+
+/*  + is the adjacent combinator (next to the previous) */
+h2+p{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.stars span:hover{
+    cursor: pointer;
+}
+
+/*  ~ is a sibling combinator */
+.stars span:hover~span{
+    opacity: .5;
+}
+
+a[href="#"]{
+    color: plum;
+}
+
+/* ^= is for begins with */
+
+a[href^="http"]{
+    border-left: 6px solid plum;
+    padding-left: 1em;
+}
+
+/* $ is for ends with */
+
+a[href$=".pdf"]::after{
+    content: "\2913";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: plum;
+}
+
+/*  + is the adjacent combinator, :: first-line is to select the text in first line */
+h2+p::first-line{
+    color: plum;
+}
+
+/*  + is the adjacent combinator, :: first-letter is to select the text in first letter */
+
+h3+p::first-letter{
+    background-color: aqua;
+    color: red;
+    font-size: 1.25rem;
+    padding: .25em;
+    margin: .15em;
+}
